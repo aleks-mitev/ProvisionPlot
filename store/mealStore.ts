@@ -39,7 +39,7 @@ export const useMealBuilderStore = create<MealBuilderState>((set) => ({
         )
     })),
 
-    // Wipes the RAM clean after a successful save or if the user cancels
+    // Wipes the form inputs clean after a successful save or if the user cancels
     clearBuilder: () => set({ mealName: "", ingredients: [] }),
 
     setMealState: (name, ingredients) => set({ mealName: name, ingredients: ingredients }),

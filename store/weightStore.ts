@@ -28,7 +28,7 @@ export const useWeightStore = create<WeightState>((set, get) => ({
   logs: [],
   contexts: [],
   loadWeightData: () => {
-    initializeDefaultWeightContexts(); // Check and inject defaults if fresh install
+    initializeDefaultWeightContexts();
     const logs = getAllWeightLogs();
     const contexts = getAllWeightContexts();
     set({ logs, contexts });
@@ -51,11 +51,11 @@ export const useWeightStore = create<WeightState>((set, get) => ({
   },
   removeContext: (tagName) => {
     deleteWeightContext(tagName);
-    
-    // Re-fetch both, because the logs table was just modified by the DB function
-    const updatedLogs = getAllWeightLogs(); 
+
+    // Re-fetch both, because the weight logs table was just modified by the DB function
+    const updatedLogs = getAllWeightLogs();
     const updatedContexts = getAllWeightContexts();
-    
+
     set({ logs: updatedLogs, contexts: updatedContexts });
   },
   renameContext: (oldName, newName) => {

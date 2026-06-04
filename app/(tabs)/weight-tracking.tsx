@@ -76,8 +76,7 @@ export default function WeightTrackingScreen() {
   const stats = useMemo(() => {
     const days = timeframe === '1W' ? 7 : timeframe === '2W' ? 14 : timeframe === '4W' ? 28 : 90;
 
-    // Anchor to the latest mock date
-    const now = new Date('2026-05-26T23:59:59Z');
+    const now = new Date();
 
     const currentCutoff = new Date(now);
     currentCutoff.setDate(currentCutoff.getDate() - days);

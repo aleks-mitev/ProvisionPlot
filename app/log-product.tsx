@@ -118,7 +118,7 @@ export default function LogProductScreen() {
               keyboardType="numeric"
               maxLength={4}
               className="text-4xl text-primary font-bold text-center p-0 m-0"
-              style={{ includeFontPadding: false }} // Android specific fix
+              style={{ includeFontPadding: false }}
             />
             <Text className="text-primary text-2xl font-bold mb-1 ml-0.5">g</Text>
           </View>

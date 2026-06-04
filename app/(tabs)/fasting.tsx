@@ -307,7 +307,7 @@ export default function FastingScreen() {
             <View className="absolute inset-0">
               {isFasting ? (
                 <View className="absolute bottom-0 left-0 right-0 top-0">
-                  {/* New SVG Wrapper */}
+                  {/* SVG Wrapper */}
                   <Svg width="100%" height="100%" viewBox="0 0 288 288">
                     {activeFast?.target_hours && (
                       <Circle
@@ -429,7 +429,6 @@ export default function FastingScreen() {
             </Text>
           </TouchableOpacity>
 
-          {/* Sub-button text space to maintain fixed height */}
           {isFasting && targetHours ? (
             <View className="items-center mt-3">
               <Text className="text-secondary/60 text-xs font-bold uppercase">

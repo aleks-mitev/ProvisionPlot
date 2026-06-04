@@ -5,12 +5,11 @@ import { StatusBar } from 'expo-status-bar';
 import { Stack } from 'expo-router';
 import { View, Platform } from 'react-native';
 import * as NavigationBar from 'expo-navigation-bar';
-import { initDatabase } from '../db/database'; 
+import { initDatabase } from '../db/database';
 
 export default function Layout() {
   const [dbInitialized, setDbInitialized] = useState(false);
 
-  // Fire the engine exactly once and wait for it
   useEffect(() => {
     async function setupDb() {
       await initDatabase();
